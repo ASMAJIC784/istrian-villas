@@ -1,10 +1,11 @@
-/* Reset & basics */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body & container */
 body {
   font-family: 'Poppins', sans-serif;
   background: #fff;
@@ -28,13 +29,13 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
   font-weight: 700;
   font-size: 1.7rem;
-  color: #d4af37; /* gold */
+  color: #d4af37;
   letter-spacing: 3px;
   user-select: none;
 }
@@ -77,7 +78,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 0;
 }
 
@@ -117,7 +118,7 @@ body {
   background-color: #b38a18;
 }
 
-/* VILLAS SECTION */
+/* VILLAS */
 .villas-section {
   padding: 60px 0;
   text-align: center;
@@ -146,177 +147,4 @@ body {
   box-shadow: 0 5px 18px rgb(0 0 0 / 0.12);
   cursor: pointer;
   text-decoration: none;
-  color: #222;
-  transition: transform 0.25s ease;
-}
-
-.villa-card:hover {
-  transform: translateY(-10px);
-}
-
-.villa-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.villa-card h3 {
-  font-weight: 600;
-  font-size: 1.4rem;
-  padding: 20px 0;
-}
-
-/* LOCATION & REVIEWS SECTION */
-.location-reviews {
-  display: flex;
-  gap: 40px;
-  padding: 60px 0;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.map-container {
-  flex: 1 1 500px;
-  max-width: 600px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 350px;
-  border: 0;
-}
-
-.reviews {
-  flex: 1 1 350px;
-  background: #f9f7f2;
-  border-radius: 8px;
-  padding: 30px 25px;
-  box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
-}
-
-.reviews h3 {
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #444;
-  text-align: center;
-}
-
-.review {
-  margin-bottom: 25px;
-}
-
-.review strong a {
-  color: #d4af37;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.review strong a:hover {
-  text-decoration: underline;
-}
-
-.stars {
-  color: #d4af37;
-  font-size: 1.2rem;
-  margin-left: 6px;
-}
-
-.review p {
-  margin-top: 8px;
-  font-style: italic;
-  color: #555;
-  font-size: 0.95rem;
-}
-
-/* CONTACT SECTION */
-.contact-section {
-  padding: 70px 0 100px;
-  background-color: #faf9f5;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 40px;
-  font-weight: 700;
-  color: #222;
-}
-
-.contact-form {
-  max-width: 480px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 16px 20px;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  border: 1.5px solid #ccc;
-  border-radius: 6px;
-  transition: border-color 0.3s ease;
-  resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #d4af37;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-}
-
-.contact-form button {
-  background-color: #d4af37;
-  border: none;
-  padding: 16px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #b38a18;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-  }
-
-  .villa-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .location-reviews {
-    flex-direction: column;
-  }
-
-  .map-container,
-  .reviews {
-    max-width: 100%;
-    flex: none;
-  }
-}
+  color
