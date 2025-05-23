@@ -1,306 +1,311 @@
-/* === GENERAL RESET === */
+/* Reset and basics */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
 }
 
-/* === NAVBAR === */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAVBAR */
 .navbar {
-  background-color: #003049;
-  padding: 1rem 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
 }
 
 .navbar .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
 }
 
 .logo {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #d4af37; /* gold */
   letter-spacing: 2px;
-  user-select: none;
+  cursor: default;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 35px;
 }
 
 .nav-links li a {
-  color: white;
+  color: #444;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  padding-bottom: 4px;
-  border-bottom: 3px solid transparent;
-  transition: border-color 0.3s ease, color 0.3s ease;
+  padding-bottom: 3px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-links li a:hover,
-.nav-links li a:focus {
-  color: #fcbf49;
-  border-bottom-color: #fcbf49;
-  outline: none;
+.nav-links li a.active {
+  color: #d4af37;
+  border-bottom: 2px solid #d4af37;
 }
 
-/* === HERO SECTION === */
+/* HERO */
 .hero {
-  height: 90vh;
+  height: 80vh;
   background-position: center;
   background-size: cover;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
+  color: #fff;
+  text-shadow: 1px 1px 7px rgba(0,0,0,0.8);
   position: relative;
-  padding: 0 1rem;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 1;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
   max-width: 700px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .hero p {
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  font-size: 1.25rem;
+  margin-bottom: 25px;
 }
 
-.btn {
-  background-color: #fcbf49;
-  color: #003049;
-  padding: 0.75rem 2rem;
+.btn-primary {
+  display: inline-block;
+  background: #d4af37;
+  color: #fff;
+  padding: 12px 35px;
   font-weight: 700;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
   text-decoration: none;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
 }
 
-.btn:hover {
-  background-color: #d4a123;
+.btn-primary:hover {
+  background: #b38a18;
 }
 
-/* === VILLAS SECTION === */
+/* VILLAS */
 .villas {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 1rem;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .villas h2 {
   font-size: 2.5rem;
-  color: #003049;
-  margin-bottom: 2rem;
-  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
   font-weight: 700;
 }
 
 .villa-grid {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .villa-card {
-  background: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
   overflow: hidden;
-  width: 300px;
+  max-width: 320px;
   transition: transform 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .villa-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 }
 
 .villa-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  display: block;
 }
 
 .villa-card h3 {
-  padding: 1rem;
-  text-align: center;
-  color: #003049;
-  font-weight: 700;
-  font-size: 1.5rem;
+  padding: 20px 0;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
 }
 
-/* === LOCATION SECTION === */
+/* LOCATION */
 .location {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  text-align: center;
+  padding: 60px 0 80px;
 }
 
 .location h2 {
-  font-size: 2.5rem;
-  color: #003049;
-  margin-bottom: 2rem;
-  font-weight: 700;
-}
-
-.location iframe {
-  width: 50%;
-  height: 400px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* === REVIEWS SECTION === */
-.reviews {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 1rem;
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #333;
 }
 
-.reviews h2 {
-  font-size: 2.5rem;
-  color: #003049;
-  margin-bottom: 2rem;
+.location-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Map half width */
+.location iframe {
+  flex: 1 1 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.15);
+  min-width: 300px;
+}
+
+/* REVIEWS */
+.reviews {
+  flex: 1 1 350px;
+  background: #f9f7f2;
+  border-radius: 8px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+}
+
+.reviews h3 {
   font-weight: 700;
+  margin-bottom: 20px;
+  color: #444;
+  text-align: center;
 }
 
 .review {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  text-align: left;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .review strong a {
-  color: #003049;
+  color: #d4af37;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 700;
-  transition: color 0.3s ease;
 }
 
-.review strong a:hover,
-.review strong a:focus {
-  color: #fcbf49;
-  outline: none;
+.review strong a:hover {
+  text-decoration: underline;
 }
 
 .stars {
-  color: #fcbf49;
-  font-size: 1.2rem;
-  margin-left: 0.5rem;
+  color: #d4af37;
+  font-size: 1.1rem;
+  margin-left: 6px;
 }
 
-/* === CONTACT SECTION === */
-#contact {
-  max-width: 600px;
-  margin: 4rem auto 6rem;
-  padding: 0 1rem;
+.review p {
+  margin-top: 8px;
+  font-style: italic;
+  color: #555;
+}
+
+/* CONTACT */
+.contact {
+  background: #f7f5f0;
+  padding: 60px 0 80px;
   text-align: center;
 }
 
-#contact h2 {
-  font-size: 2.5rem;
-  color: #003049;
-  margin-bottom: 2rem;
+.contact h2 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #333;
   font-weight: 700;
 }
 
-#contact form {
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 18px;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
-  padding: 0.75rem 1rem;
+.contact-form input,
+.contact-form textarea {
+  padding: 15px 18px;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
   font-size: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s ease;
   resize: vertical;
-  min-height: 40px;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease;
 }
 
-#contact input[type="text"]:focus,
-#contact input[type="email"]:focus,
-#contact textarea:focus {
-  border-color: #fcbf49;
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
+  border-color: #d4af37;
 }
 
-#contact textarea {
+.contact-form textarea {
   min-height: 120px;
 }
 
-#contact button {
-  background-color: #fcbf49;
-  color: #003049;
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 0.75rem;
+.contact-form button {
+  background: #d4af37;
   border: none;
-  border-radius: 30px;
+  color: white;
+  padding: 15px;
+  font-weight: 700;
+  border-radius: 6px;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-#contact button:hover {
-  background-color: #d4a123;
+.contact-form button:hover {
+  background: #b38a18;
 }
 
-/* === RESPONSIVE === */
+/* Responsive */
 @media (max-width: 768px) {
   .villa-grid {
     flex-direction: column;
     align-items: center;
   }
-
-  .location iframe {
+  .location-wrapper {
+    flex-direction: column;
+  }
+  .location iframe,
+  .reviews {
     width: 100%;
-    height: 300px;
+  }
+  .nav-links {
+    gap: 20px;
   }
 }
