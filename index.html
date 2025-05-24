@@ -9,11 +9,21 @@
 <body>
 
 <header>
-  <h1>Istrian Villas</h1>
-  <p>Your Dream Stay in Istria</p>
+  <nav class="top-nav">
+    <div class="container-nav">
+      <a href="#" class="logo">Istrian Villas</a>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Villas</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 </header>
 
-<main class="villa-grid">
+<main class="villa-grid container-nav">
 
   <article class="villa-item">
     <a href="https://www.booking.com/hotel/hr/villa-zara-santalezi.html" target="_blank" rel="noopener">
@@ -61,6 +71,25 @@
   </article>
 
 </main>
+
+<!-- Contact Us Section -->
+<footer>
+  <section class="contact-us container-nav">
+    <h2>Contact Us</h2>
+    <form action="mailto:istrianvillazara@gmail.com" method="GET" enctype="text/plain" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name" placeholder="Your Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" placeholder="Your Email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" placeholder="Your message here..." rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</footer>
 
 </body>
 </html>
