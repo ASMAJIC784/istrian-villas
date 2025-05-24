@@ -3,109 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Istrian Villas</title>
-  <link href="style.css" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
-    rel="stylesheet"
-  />
+  <title>Istrian Villas - Holiday Rentals</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVIGATION -->
   <header>
-    <nav class="navbar container">
-      <div class="logo">ISTRIA VILLAS</div>
-      <ul class="nav-links">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#villas">Villas</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">Istrian Villas</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#villas">Villas</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section
-    id="hero"
-    class="hero"
-    style="background-image: url('images/background-page-test.jpg');"
-  >
-    <div class="hero-content container">
+  <section class="hero" style="background-image: url('images/background_pic.jpg');">
+    <div class="hero-content">
       <h1>Welcome to Istrian Villas</h1>
-      <p>Experience luxury and comfort in the heart of Istria</p>
-      <a href="#contact" class="btn-primary">Book Now</a>
+      <p>Choose your perfect holiday villa</p>
     </div>
   </section>
 
-  <!-- VILLAS -->
-  <section id="villas" class="container villas-section">
+  <section id="villas" class="villas-section container">
     <h2>Our Villas</h2>
-    <div class="villa-grid">
-      <a href="villa1/index.html" class="villa-card">
-        <img src="images/Villa_Zara/Villa Zara pic.jpg" alt="Villa Zara" />
+    <div class="villa-cards">
+      <a href="villa-zara.html" class="villa-card">
+        <img src="images/Villa_Zara/main.jpg" alt="Villa Zara" />
         <h3>Villa Zara</h3>
       </a>
-      <a href="villa2/index.html" class="villa-card">
-        <img src="images/Villa_Laura/Villa Laura pic.jpg" alt="Villa Laura" />
+      <a href="villa-laura.html" class="villa-card">
+        <img src="images/Villa_Laura/main.jpg" alt="Villa Laura" />
         <h3>Villa Laura</h3>
       </a>
-      <a href="villa3/index.html" class="villa-card">
-        <img src="images/Villa_Vale/Villa Vale pic.jpg" alt="Villa Vale" />
+      <a href="villa-vale.html" class="villa-card">
+        <img src="images/Villa_Vale/main.jpg" alt="Villa Vale" />
         <h3>Villa Vale</h3>
       </a>
     </div>
   </section>
 
-  <!-- LOCATION & REVIEWS -->
-  <section id="location" class="container location-reviews">
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.317604433336!2d14.101922215840677!3d45.13084155917753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47634d7ce68eb081%3A0xdbda2ee71343e6d5!2sVilla%20Zara!5e0!3m2!1sen!2shr!4v1716578327726!5m2!1sen!2shr"
-        width="100%"
-        height="350"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-
-    <aside class="reviews">
-      <h3>Guest Reviews</h3>
-      <div class="review">
-        <strong
-          ><a
-            href="https://www.google.com/maps/contrib/109904436111779261555/reviews?hl=en-US"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Rob Zahtila</a
-          ></strong
-        >
-        <span class="stars">★★★★★</span>
-        <p>
-          "A short break at Villa Zara. Hosts were wonderful and the property
-          beautiful. Picturesque outlook over vineyards with mountains in the
-          distance. A first class property and holiday."
-        </p>
-      </div>
-    </aside>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="container contact-section">
+  <section id="contact" class="contact-section container">
     <h2>Contact Us</h2>
-    <form
-      action="mailto:istrianvillazara@gmail.com"
-      method="post"
-      enctype="text/plain"
-      class="contact-form"
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn-primary">Send</button>
-    </form>
+    <p>For bookings and inquiries, email us at <a href="mailto:istrianvillazara@gmail.com">istrianvillazara@gmail.com</a></p>
   </section>
 </body>
 </html>
