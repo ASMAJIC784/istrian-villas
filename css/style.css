@@ -19,16 +19,6 @@ body {
   padding: 0.5rem 0;
 }
 
-.container-nav {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-}
-
 .logo {
   font-weight: 900;
   font-size: 2.2rem;
@@ -92,7 +82,7 @@ body {
 /* Villa Grid */
 .villa-grid {
   max-width: 1100px;
-  margin: 2rem auto 7rem auto;
+  margin: 2rem auto 8rem auto;
   padding: 0 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -138,6 +128,11 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1);
+}
+
+.villa-item:hover .image-wrapper img {
+  transform: scale(1.06);
 }
 
 .overlay {
@@ -170,7 +165,7 @@ footer {
   background: #222;
   color: #fff;
   padding: 0;
-  margin-top: 8rem; /* Increased margin to move contact section further down */
+  margin-top: 10rem;
   border-radius: 24px 24px 0 0;
   box-shadow: 0 -2px 24px rgba(0,0,0,0.10);
   display: flex;
@@ -180,15 +175,12 @@ footer {
 
 .contact-us {
   max-width: 700px;
-  margin: 6rem auto 0 auto; /* More top margin for separation */
+  margin: 8rem auto 0 auto;
   background: #fff;
   border-radius: 24px;
   box-shadow: 0 6px 32px rgba(0,191,165,0.10);
   padding: 2.5rem 2rem 2rem 2rem;
   border: 1.5px solid #e0f2f1;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .contact-us h2 {
@@ -268,6 +260,7 @@ footer {
   font-size: 1rem;
   background: #222;
   border-radius: 0 0 24px 24px;
+  margin-top: 2rem;
 }
 
 /* Responsive Contact Form */
