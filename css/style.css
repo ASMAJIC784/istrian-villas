@@ -1,4 +1,3 @@
-/* Reset and base */
 * {
   box-sizing: border-box;
 }
@@ -10,11 +9,10 @@ body {
   color: #333;
 }
 
-/* --- Top Navigation Bar --- */
+/* Top Navigation */
 .top-nav {
   background: linear-gradient(90deg, #004d40 60%, #00bfa5 100%);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  border-bottom: 2px solid #00bfa5;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -33,228 +31,208 @@ body {
 .logo {
   font-weight: 700;
   font-size: 2rem;
-  letter-spacing: 0.15em;
   color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .menu {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.3s ease;
 }
 
-.menu li a:hover,
-.menu li a:focus {
+.menu li a:hover {
   background: #00bfa5;
-  color: #fff;
-  border-bottom: none;
-  outline: none;
 }
 
-/* --- Hero Section --- */
+/* Hero Section */
 .hero {
-  max-width: 1100px;
-  margin: 2rem auto 1.5rem;
-  padding: 2.5rem 1.5rem;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  background: url('../images/background_pic.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 3rem 1rem 2rem 1rem; /* Reduced top padding, added bottom padding */
   text-align: center;
+  color: #fff;
+  border-radius: 0 0 16px 16px;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  color: #004d40;
   margin-bottom: 0.5rem;
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* --- Grid container --- */
+/* Villa Grid */
 .villa-grid {
   max-width: 1100px;
-  margin: 2rem auto;
+  margin: 2rem auto 10rem auto; /* Increased bottom margin for more space above footer */
   padding: 0 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-/* Villa item */
+/* Optionally, add more top margin if needed */
+@media (min-width: 601px) {
+  .villa-grid {
+    margin-top: 3rem;
+  }
+}
+
+/* Villa Cards */
 .villa-item {
-  background-color: white;
-  border: 1px solid #e0e0e0;
+  background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
   overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease;
 }
 
 .villa-item:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 32px rgba(0,191,165,0.13);
+  transform: scale(1.03);
 }
 
-/* Image wrapper with fixed aspect ratio */
 .image-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 68.75%; /* 220/320 aspect ratio */
+  padding-top: 66.66%; /* 3:2 ratio */
   overflow: hidden;
-  border-radius: 12px 12px 0 0;
 }
 
 .image-wrapper img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
 }
 
-.villa-item:hover .image-wrapper img {
-  transform: scale(1.05);
-}
-
-/* Overlay */
 .overlay {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,77,64,0.85), transparent 80%);
-  color: white;
-  padding: 1.2rem 1.5rem;
-  border-radius: 0 0 12px 12px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 77, 64, 0.85), transparent);
+  color: #fff;
+  padding: 1rem;
 }
 
 .overlay h2 {
-  margin: 0 0 0.25rem 0;
+  margin: 0;
   font-size: 1.5rem;
-  font-weight: 700;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
 
 .overlay p {
   margin: 0;
   font-size: 1rem;
-  font-weight: 500;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
-/* Description below image */
 .description {
-  padding: 1rem 1.25rem 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.4;
-  color: #444;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-/* --- Contact Us Section --- */
+/* Contact Section */
 footer {
   background: linear-gradient(90deg, #004d40 60%, #00bfa5 100%);
+  padding: 3rem 1rem 4rem;
   color: #fff;
   border-radius: 16px 16px 0 0;
   box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
-  padding: 3rem 1rem 4rem;
-  margin-top: 4rem;
 }
 
 .contact-us {
-  max-width: 1100px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .contact-us h2 {
+  text-align: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 0.08em;
-  color: #fff;
 }
 
 .contact-form {
   display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: 0 auto;
+  flex-direction: row;
   gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .contact-form label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+  display: none; /* Hide labels for horizontal layout, use placeholders instead */
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem 1rem;
-  border: 1px solid #b2dfdb;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  background: #f9f9f9;
-  color: #333;
+  flex: 1 1 180px;
+  min-width: 150px;
+  margin-bottom: 0;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: 2px solid #00bfa5;
-  background: #e0f7fa;
+.contact-form textarea {
+  min-width: 220px;
+  max-width: 300px;
 }
 
 .contact-form button {
-  margin-top: 1rem;
-  padding: 0.85rem;
-  font-size: 1.1rem;
-  background-color: #00bfa5;
-  border: none;
-  border-radius: 8px;
-  color: #004d40;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  flex: 0 0 auto;
+  margin-top: 0;
+  height: 48px;
+  align-self: stretch;
 }
 
-.contact-form button:hover,
-.contact-form button:focus {
-  background-color: #008e76;
-  outline: none;
+/* Responsive: Stack vertically on small screens */
+@media (max-width: 900px) {
+  .contact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 600px) {
-  .image-wrapper {
-    padding-top: 75%; /* adjust aspect ratio for smaller screens */
+  .menu {
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .villa-grid {
+    grid-template-columns: 1fr;
   }
 
   .container-nav {
-    padding: 0 1rem;
-  }
-
-  .contact-form {
-    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
