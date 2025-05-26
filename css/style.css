@@ -323,42 +323,4 @@ body {
 .page-bottom-spacer {
   height: 350px;  /* or whatever height you want */
   width: 100%;
-  max-width: 100%;
-  margin: 2rem 0 0 0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,191,165,0.10);
-}
-
-/* Responsive Contact Form */
-@media (max-width: 900px) {
-  .contact-form {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .contact-form textarea {
-    min-width: 100%;
-  }
-  .hero {
-    padding: 2rem 1rem 1.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu {
-    gap: 1rem;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .villa-grid {
-    grid-template-columns: 1fr;
-  }
-  .container-nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
