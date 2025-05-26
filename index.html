@@ -3,115 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Istrian Villas - Home</title>
+  <title>Istrian Villas</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-<header>
-  <nav class="top-nav">
-    <div class="container-nav">
-      <a href="#" class="logo">Istrian Villas</a>
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Villas</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+  <header class="top-header">
+  <div class="logo">
+    <img src="images/logo.svg" alt="My Istrian Villas Logo">
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#villas">Villas</a></li>
+      <li><a href="#locations">Our Locations</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Welcome to Istrian Villas</h1>
-    <p>Discover your perfect getaway in the heart of Istria. Browse our handpicked selection of luxury villas for an unforgettable holiday experience.</p>
-  </div>
-</section>
-
-<main class="villa-grid">
-
-  <article class="villa-item">
-    <a href="https://www.booking.com/hotel/hr/villa-zara-santalezi.html" target="_blank" rel="noopener">
-      <div class="image-wrapper">
-        <img src="images/Villa_Zara/villa_zara_pic.jpg" alt="Villa Zara" />
-        <div class="overlay">
-          <h2>Villa Zara</h2>
-          <p>Santalezi, Croatia</p>
-        </div>
+  <main>
+    <section class="hero-background">
+      <div class="hero-overlay">
+        <h2>Welcome to Istrian Villas</h2>
+        <p>Experience comfort and luxury in the heart of Istria</p>
       </div>
-    </a>
-    <p class="description">
-      Luxurious villa with stunning views, spacious rooms, and modern amenities. 4 bedrooms, 3 bathrooms, sleeps 8.
-    </p>
-  </article>
-
-  <article class="villa-item">
-    <a href="https://www.booking.com/hotel/hr/villa-laura-santalezi.html" target="_blank" rel="noopener">
-      <div class="image-wrapper">
-        <img src="images/Villa_Laura/villa_laura_pic.jpg" alt="Villa Laura" />
-        <div class="overlay">
-          <h2>Villa Laura</h2>
-          <p>Santalezi, Croatia</p>
-        </div>
+      <div class="search-box">
+        <form>
+          <input type="date" name="checkin" placeholder="Check-in" required>
+          <input type="date" name="checkout" placeholder="Check-out" required>
+          <input type="number" name="guests" placeholder="Guests" min="1" required>
+          <button class="btn">Search</button>
+        </form>
       </div>
-    </a>
-    <p class="description">
-      Charming villa with beautiful interiors and a relaxing garden. 3 bedrooms, 2 bathrooms, sleeps 6.
-    </p>
-  </article>
+    </section>
 
-  <article class="villa-item">
-    <a href="https://www.booking.com/hotel/hr/villa-vale-labin.html" target="_blank" rel="noopener">
-      <div class="image-wrapper">
-        <img src="images/Villa_Vale/villa_vale_pic.jpg" alt="Villa Vale" />
-        <div class="overlay">
-          <h2>Villa Vale</h2>
-          <p>Labin, Croatia</p>
+    <section class="villas-section" id="villas">
+      <h1>Our Villas</h1>
+      <div class="villa-cards">
+
+        <div class="villa-card">
+          <div class="image-container">
+            <img src="images/Villa_Zara/villa_zara_pic.jpg" alt="Villa Zara">
+            <div class="overlay">
+              <p>A beautiful seaside villa with stunning views and modern amenities.</p>
+            </div>
+          </div>
+          <h3 class="villa-name-fixed">Villa Zara</h3>
         </div>
+
+        <div class="villa-card">
+          <div class="image-container">
+            <img src="images/Villa_Laura/villa_laura_pic.jpg" alt="Villa Laura">
+            <div class="overlay">
+              <p>Charming countryside retreat with spacious gardens and a pool.</p>
+            </div>
+          </div>
+          <h3 class="villa-name-fixed">Villa Laura</h3>
+        </div>
+
+        <div class="villa-card">
+          <div class="image-container">
+            <img src="images/Villa_Vale/villa_vale_pic.jpg" alt="Villa Vale">
+            <div class="overlay">
+              <p>Cozy villa perfect for families, surrounded by nature and tranquility.</p>
+            </div>
+          </div>
+          <h3 class="villa-name-fixed">Villa Vale</h3>
+        </div>
+
       </div>
-    </a>
-    <p class="description">
-      Elegant design with comfortable spaces. 5 bedrooms, 4 bathrooms, sleeps 10.
-    </p>
-  </article>
+    </section>
 
-</main>
+    <section class="locations-section" id="locations">
+      <h2>Our Locations</h2>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/d/embed?mid=1AFfTvRhazzn-5WSSSTJhIa8wftusTEc&ehbc=2E312F"
+          width="80%" height="400" style="border:0; border-radius:16px; margin-top:2rem;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
 
-<footer>
-  <section class="contact-us">
-    <h2>Contact Us</h2>
-    <form action="mailto:istrianvillazara@gmail.com" method="GET" enctype="text/plain" class="contact-form">
-      <input type="text" id="name" name="Name" placeholder="Your Name" required />
-      <input type="email" id="email" name="Email" placeholder="Your Email" required />
-      <textarea id="message" name="Message" placeholder="Your message here..." rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <section class="contact-section" id="contact">
+      <h2>Contact Us</h2>
+      <p>Send us a message and we’ll get back to you soon.</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button class="btn">Send Message</button>
+      </form>
+    </section>
 
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/d/embed?mid=1AFfTvRhazzn-5WSSSTJhIa8wftusTEc&ehbc=2E312F"
-        width="100%" height="400" style="border:0; border-radius:16px; margin-top:2rem;"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
-  <div class="footer-bottom">
-    &copy; 2025 Istrian Villas. All rights reserved.
-  </div>
-</footer>
-
+    <!-- blank spacer -->
+    <div class="page-bottom-spacer"></div>
+  </main>
 </body>
 </html>
-
-<style>
-.map-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 2rem 0 0 0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,191,165,0.10);
-}
-</style>
