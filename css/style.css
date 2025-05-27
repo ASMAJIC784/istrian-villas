@@ -169,18 +169,6 @@ body {
 }
 
 .villa-card {
-  flex: 1 1 0;
-  max-width: 380px;
-  min-width: 300px; 
-  margin: 0 10px; 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  overflow: hidden;
-  background: white;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 6px 32px rgba(0,0,0,0.10);
@@ -248,11 +236,6 @@ body {
 }
 
 .villa-name-fixed {
-  font-weight: bold;
-  font-size: 18px;
-  margin: 10px 0;
-  color: #333;
-  text-align: center;
   margin-top: 1.2rem;
   font-size: 1.44rem; /* 1.2rem * 1.2 */
   color: #2d7a4b;
@@ -360,7 +343,7 @@ body {
   background: #f8f8f8;
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1.8rem 1.2rem 1.2rem 1.2rem;
   margin-bottom: 1.5rem;
   text-align: center;
   position: relative;
