@@ -227,19 +227,7 @@
         <div class="villa-modal-content">
           <button class="villa-modal-close" onclick="closeModal('modal-zara')">&times;</button>
           <h2>All Reviews for Villa Zara</h2>
-          <div class="review"><div class="review-header"><span class="reviewer">Callista Marie</span><span class="stars">★★★★★</span></div><p>What an amazing home! Everything is so beautiful and the finishing touches are just stunning. Super comfy beds!</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Marco Wild</span><span class="stars">★★★★★</span></div><p>Posto nuovissimo! Molto pulito e accogliente, il proprietario è stato molto gentile e accogliente su ogni richiesta, conosce bene la gente del posto e ci ha aiutato ad organizzare le vacanze nei dintorni.</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Rob Zahtila</span><span class="stars">★★★★★</span></div><p>A short break at Villa Zara. Hosts were wonderful and the property beautiful. Picturesque outlook over vineyards with mountains in the distance. A first class property and holiday.</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Igor Isakovic</span><span class="stars">★★★★★</span></div><p>House is very clean and lots of space. It was really nice and quiet location. Kids really enjoyed pool. Owner was very kind and helpful. Definitely coming back.</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Amy West</span><span class="stars">★★★★★</span></div><p>Fantastic vacation villa with stunning views. The host was incredibly helpful and the amenities were top-notch. Highly recommend!</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Thomas</span><span class="stars">★★★★★</span></div><p>Just a perfect accommodation for our family vacation. Spacious, clean, and with a breathtaking view. The host was very welcoming.</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Nina (Slovenia)</span><span class="stars">★★★★★</span></div><p>Vse je bilo odlično! Čisto, prostorno in zelo dobro opremljeno. Hvala za čudovit dopust!</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Nina (Croatia)</span><span class="stars">★★★★★</span></div><p>Amazing house and well equipped. The location is perfect for a quiet getaway. The host is very friendly and helpful.</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Vanja</span><span class="stars">★★★★★</span></div><p>Our hosts (wonderful couple) made us feel like home. The villa is stunning, with a beautiful view over the vineyards. Highly recommend!</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Ruslan</span><span class="stars">★★★★★</span></div><p>Magnificent and functional new villa with all the amenities you could ask for. The location is peaceful and the views are breathtaking.</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Marin</span><span class="stars">★★★★★</span></div><p>Sve lijepo i uredno, domaćini izuzetno ljubazni i uslužni. Preporučujem svima!</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Verena</span><span class="stars">★★★★★</span></div><p>Es war rund um ein perfekter Urlaub. Die Villa ist traumhaft schön und die Gastgeber sehr nett und hilfsbereit.</p></div>
-          <!-- Add even more reviews if needed -->
+          <div class="reviews-container" id="reviews-zara"></div>
         </div>
       </div>
 
@@ -248,9 +236,7 @@
         <div class="villa-modal-content">
           <button class="villa-modal-close" onclick="closeModal('modal-laura')">&times;</button>
           <h2>All Reviews for Villa Laura</h2>
-          <div class="review"><div class="review-header"><span class="reviewer">Эдита</span><span class="stars">★★★★★</span></div><p>A wonderful villa, fully equipped with everything you need. Modern renovation, each room has its own bathroom, large pool, beautiful view of the vineyards. The owner is very caring and attentive. Highly recommend, will definitely come back!</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Katarina</span><span class="stars">★★★★★</span></div><p>Das Haus ist toll, sauber und die Chefin super nett und zuvorkommend. Es war sehr sauber und wie auf den Bildern. Es gab leider keine Fliegengitter an den Fenstern.</p></div>
-          <!-- Add all other reviews for Laura here -->
+          <div class="reviews-container" id="reviews-laura"></div>
         </div>
       </div>
 
@@ -259,9 +245,7 @@
         <div class="villa-modal-content">
           <button class="villa-modal-close" onclick="closeModal('modal-vale')">&times;</button>
           <h2>All Reviews for Villa Vale</h2>
-          <div class="review"><div class="review-header"><span class="reviewer">Phan</span><span class="stars">★★★★★</span></div><p>Diese Unterkunft hat die volle Punktzahl verdient. Ausstattung, Lage und Besitzer, alles perfekt!</p></div>
-          <div class="review"><div class="review-header"><span class="reviewer">Davide</span><span class="stars">★★★★★</span></div><p>Villa molto confortevole, ideale per due famiglie. Non manca nulla, il gestore è estremamente disponibile. A poca distanza da Labin, splendido borgo nel quale cenare. La zona è molto tranquilla und die piscina pulitissima.</p></div>
-          <!-- Add all other reviews for Vale here -->
+          <div class="reviews-container" id="reviews-vale"></div>
         </div>
       </div>
 
@@ -296,6 +280,34 @@
     document.querySelectorAll('.show-all-reviews').forEach(btn => {
       btn.addEventListener('click', function() {
         var modalId = this.getAttribute('data-modal');
+        var reviewsFile = '';
+        var reviewsContainer = '';
+        if (modalId === 'modal-zara') {
+          reviewsFile = 'villa-zara-reviews.html';
+          reviewsContainer = 'reviews-zara';
+        }
+        if (modalId === 'modal-laura') {
+          reviewsFile = 'villa-laura-reviews.html';
+          reviewsContainer = 'reviews-laura';
+        }
+        if (modalId === 'modal-vale') {
+          reviewsFile = 'villa-vale-reviews.html';
+          reviewsContainer = 'reviews-vale';
+        }
+        // Only load if not already loaded
+        var container = document.getElementById(reviewsContainer);
+        if (!container.dataset.loaded) {
+          fetch(reviewsFile)
+            .then(response => response.text())
+            .then(html => {
+              // Extract only the reviews (assume .reviews-page-container in each file)
+              const tempDiv = document.createElement('div');
+              tempDiv.innerHTML = html;
+              const reviews = tempDiv.querySelector('.reviews-page-container');
+              container.innerHTML = reviews ? reviews.innerHTML : html;
+              container.dataset.loaded = "true";
+            });
+        }
         document.getElementById(modalId).classList.add('open');
         document.body.style.overflow = 'hidden';
       });
