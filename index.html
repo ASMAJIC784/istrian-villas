@@ -6,6 +6,7 @@
   <title>Istrian Villas</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
   <style>
     .image-container {
       cursor: pointer;
@@ -26,6 +27,10 @@
 
     .glightbox-container {
       background: rgba(34, 34, 34, 0.0) !important;
+    }
+
+    .fancybox__container {
+      background: rgba(34, 34, 34, 0.2) !important; /* 0.2 = 20% opacity */
     }
   </style>
 </head>
@@ -65,19 +70,19 @@
 
         <!-- Villa Zara -->
         <div class="villa-card">
-          <a href="images/Villa_Zara/picture1.jpg" class="glightbox" data-gallery="villa-zara" data-title="Villa Zara - Picture 1">
+          <a data-fancybox="gallery-zara" href="images/Villa_Zara/picture1.jpg" data-caption="Villa Zara - Picture 1">
             <img src="images/Villa_Zara/picture1.jpg" alt="Villa Zara">
             <div class="overlay">
               <p>A beautiful seaside villa with stunning views and modern amenities.</p>
             </div>
           </a>
-          <a href="images/Villa_Zara/picture2.jpg" class="glightbox" data-gallery="villa-zara" data-title="Villa Zara - Picture 2"></a>
-          <a href="images/Villa_Zara/picture3.jpg" class="glightbox" data-gallery="villa-zara" data-title="Villa Zara - Picture 3"></a>
-          <a href="images/Villa_Zara/picture4.jpg" class="glightbox" data-gallery="villa-zara" data-title="Villa Zara - Picture 4"></a>
-          <a href="images/Villa_Zara/picture5.jpg" class="glightbox" data-gallery="villa-zara" data-title="Villa Zara - Picture 5"></a>
-          <a href="images/Villa_Zara/picture6.jpg" class="glightbox" data-gallery="villa-zara" data-title="Villa Zara - Picture 6"></a>
-          <a href="images/Villa_Zara/picture7.jpg" class="glightbox" data-gallery="villa-zara" data-title="Villa Zara - Picture 7"></a>
-          <a href="images/Villa_Zara/picture8.jpg" class="glightbox" data-gallery="villa-zara" data-title="Villa Zara - Picture 8"></a>
+          <a data-fancybox="gallery-zara" href="images/Villa_Zara/picture2.jpg" data-caption="Villa Zara - Picture 2"></a>
+          <a data-fancybox="gallery-zara" href="images/Villa_Zara/picture3.jpg" data-caption="Villa Zara - Picture 3"></a>
+          <a data-fancybox="gallery-zara" href="images/Villa_Zara/picture4.jpg" data-caption="Villa Zara - Picture 4"></a>
+          <a data-fancybox="gallery-zara" href="images/Villa_Zara/picture5.jpg" data-caption="Villa Zara - Picture 5"></a>
+          <a data-fancybox="gallery-zara" href="images/Villa_Zara/picture6.jpg" data-caption="Villa Zara - Picture 6"></a>
+          <a data-fancybox="gallery-zara" href="images/Villa_Zara/picture7.jpg" data-caption="Villa Zara - Picture 7"></a>
+          <a data-fancybox="gallery-zara" href="images/Villa_Zara/picture8.jpg" data-caption="Villa Zara - Picture 8"></a>
           <h3 class="villa-name-fixed">Villa Zara</h3>
         </div>
 
@@ -148,6 +153,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <script>
     const lightbox = GLightbox({
       selector: '.glightbox',
