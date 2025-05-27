@@ -23,6 +23,9 @@
       justify-content: center;
       align-items: center;
     }
+    .villa-modal.open {
+      display: flex;
+    }
     .villa-modal-content {
       background: #fff;
       max-width: 600px;
@@ -33,6 +36,17 @@
       padding: 2rem;
       position: relative;
       box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      /* Ensure scrollbars are visible if needed */
+      scrollbar-width: thin;
+      scrollbar-color: #225c37 #eee;
+    }
+    .villa-modal-content::-webkit-scrollbar {
+      width: 8px;
+      background: #eee;
+    }
+    .villa-modal-content::-webkit-scrollbar-thumb {
+      background: #225c37;
+      border-radius: 8px;
     }
     .villa-modal-close {
       position: absolute;
@@ -217,7 +231,7 @@
           <div class="review"><div class="review-header"><span class="reviewer">Marco Wild</span><span class="stars">★★★★★</span></div><p>Posto nuovissimo! Molto pulito e accogliente, il proprietario è stato molto gentile e accogliente su ogni richiesta, conosce bene la gente del posto e ci ha aiutato ad organizzare le vacanze nei dintorni.</p></div>
           <div class="review"><div class="review-header"><span class="reviewer">Rob Zahtila</span><span class="stars">★★★★★</span></div><p>A short break at Villa Zara. Hosts were wonderful and the property beautiful. Picturesque outlook over vineyards with mountains in the distance. A first class property and holiday.</p></div>
           <div class="review"><div class="review-header"><span class="reviewer">Igor Isakovic</span><span class="stars">★★★★★</span></div><p>House is very clean and lots of space. It was really nice and quiet location. Kids really enjoyed pool. Owner was very kind and helpful. Definitely coming back.</p></div>
-          <!-- Add more reviews as needed -->
+          <!-- Add all other reviews for Zara here -->
         </div>
       </div>
 
@@ -228,7 +242,7 @@
           <h2>All Reviews for Villa Laura</h2>
           <div class="review"><div class="review-header"><span class="reviewer">Эдита</span><span class="stars">★★★★★</span></div><p>A wonderful villa, fully equipped with everything you need. Modern renovation, each room has its own bathroom, large pool, beautiful view of the vineyards. The owner is very caring and attentive. Highly recommend, will definitely come back!</p></div>
           <div class="review"><div class="review-header"><span class="reviewer">Katarina</span><span class="stars">★★★★★</span></div><p>Das Haus ist toll, sauber und die Chefin super nett und zuvorkommend. Es war sehr sauber und wie auf den Bildern. Es gab leider keine Fliegengitter an den Fenstern.</p></div>
-          <!-- Add more reviews as needed -->
+          <!-- Add all other reviews for Laura here -->
         </div>
       </div>
 
@@ -239,7 +253,7 @@
           <h2>All Reviews for Villa Vale</h2>
           <div class="review"><div class="review-header"><span class="reviewer">Phan</span><span class="stars">★★★★★</span></div><p>Diese Unterkunft hat die volle Punktzahl verdient. Ausstattung, Lage und Besitzer, alles perfekt!</p></div>
           <div class="review"><div class="review-header"><span class="reviewer">Davide</span><span class="stars">★★★★★</span></div><p>Villa molto confortevole, ideale per due famiglie. Non manca nulla, il gestore è estremamente disponibile. A poca distanza da Labin, splendido borgo nel quale cenare. La zona è molto tranquilla und die piscina pulitissima.</p></div>
-          <!-- Add more reviews as needed -->
+          <!-- Add all other reviews for Vale here -->
         </div>
       </div>
 
@@ -274,20 +288,20 @@
     document.querySelectorAll('.show-all-reviews').forEach(btn => {
       btn.addEventListener('click', function() {
         var modalId = this.getAttribute('data-modal');
-        document.getElementById(modalId).style.display = 'flex';
+        document.getElementById(modalId).classList.add('open');
         document.body.style.overflow = 'hidden';
       });
     });
     // Close modal function
     function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
+      document.getElementById(id).classList.remove('open');
       document.body.style.overflow = '';
     }
     // Close modal on background click
     document.querySelectorAll('.villa-modal').forEach(modal => {
       modal.addEventListener('click', function(e) {
         if (e.target === modal) {
-          modal.style.display = 'none';
+          modal.classList.remove('open');
           document.body.style.overflow = '';
         }
       });
