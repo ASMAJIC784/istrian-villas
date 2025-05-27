@@ -353,3 +353,17 @@
   </script>
 </body>
 </html>
+
+<!-- Example for one villa -->
+<% Object.keys(villaImages).forEach(villa => { %>
+  <div class="villa-card">
+    <% villaImages[villa].forEach((img, i) => { %>
+      <a data-fancybox="gallery-<%= villa %>" href="<%= img %>" data-caption="<%= villa %> - Picture <%= i+1 %>" class="image-container">
+        <% if(i === 0) { %>
+          <img src="<%= img %>" alt="<%= villa %>">
+        <% } %>
+      </a>
+    <% }) %>
+    <h3 class="villa-name-fixed"><%= villa.replace('_', ' ') %></h3>
+  </div>
+<% }) %>
