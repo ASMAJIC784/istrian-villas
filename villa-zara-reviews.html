@@ -52,10 +52,10 @@
   <script src="js/villa-reviews.js"></script>
   <script>
     // Render all reviews for Villa Zara
-    function renderAllReviews(villa, containerId) {
-      const container = document.getElementById(containerId);
+    (function renderAllReviews() {
+      const container = document.getElementById("villa-zara-reviews-list");
+      const reviews = window.villaReviews && window.villaReviews.zara ? window.villaReviews.zara : [];
       if (!container) return;
-      const reviews = (window.villaReviews && window.villaReviews[villa]) || [];
       if (reviews.length === 0) {
         container.innerHTML = "<p>No reviews yet.</p>";
         return;
@@ -69,8 +69,7 @@
           <p>${r.text}</p>
         </div>
       `).join('');
-    }
-    renderAllReviews("zara", "villa-zara-reviews-list");
+    })();
   </script>
 </body>
 </html>

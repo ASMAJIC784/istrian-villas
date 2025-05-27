@@ -51,10 +51,10 @@
   </div>
   <script src="js/villa-reviews.js"></script>
   <script>
-    function renderAllReviews(villa, containerId) {
-      const container = document.getElementById(containerId);
+    (function renderAllReviews() {
+      const container = document.getElementById("villa-laura-reviews-list");
+      const reviews = window.villaReviews && window.villaReviews.laura ? window.villaReviews.laura : [];
       if (!container) return;
-      const reviews = (window.villaReviews && window.villaReviews[villa]) || [];
       if (reviews.length === 0) {
         container.innerHTML = "<p>No reviews yet.</p>";
         return;
@@ -68,8 +68,7 @@
           <p>${r.text}</p>
         </div>
       `).join('');
-    }
-    renderAllReviews("laura", "villa-laura-reviews-list");
+    })();
   </script>
 </body>
 </html>
