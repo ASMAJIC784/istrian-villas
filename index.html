@@ -12,7 +12,7 @@
       display: block;
     }
     .fancybox__container {
-      background: rgba(34, 34, 34, 0.15) !important; /* Adjust for more/less transparency */
+      background: rgba(34, 34, 34, 0.15) !important;
     }
     .villa-modal {
       display: none;
@@ -44,6 +44,40 @@
       font-size: 1.3rem;
       cursor: pointer;
       color: #225c37;
+    }
+    .villa-reviews-summary .review {
+      margin-bottom: 1rem;
+      background: #f8f8f8;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      color: #225c37;
+      margin-bottom: .6rem;
+    }
+    .stars {
+      color: #FFD700;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
+    .btn.show-all-reviews {
+      margin-top: 0.5rem;
+      background: #225c37;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .btn.show-all-reviews:hover {
+      background: #2d7a4b;
     }
   </style>
 </head>
@@ -181,7 +215,9 @@
           <h2>All Reviews for Villa Zara</h2>
           <div class="review"><div class="review-header"><span class="reviewer">Callista Marie</span><span class="stars">★★★★★</span></div><p>What an amazing home! Everything is so beautiful and the finishing touches are just stunning. Super comfy beds!</p></div>
           <div class="review"><div class="review-header"><span class="reviewer">Marco Wild</span><span class="stars">★★★★★</span></div><p>Posto nuovissimo! Molto pulito e accogliente, il proprietario è stato molto gentile e accogliente su ogni richiesta, conosce bene la gente del posto e ci ha aiutato ad organizzare le vacanze nei dintorni.</p></div>
-          <!-- ...add all other reviews for Zara here... -->
+          <div class="review"><div class="review-header"><span class="reviewer">Rob Zahtila</span><span class="stars">★★★★★</span></div><p>A short break at Villa Zara. Hosts were wonderful and the property beautiful. Picturesque outlook over vineyards with mountains in the distance. A first class property and holiday.</p></div>
+          <div class="review"><div class="review-header"><span class="reviewer">Igor Isakovic</span><span class="stars">★★★★★</span></div><p>House is very clean and lots of space. It was really nice and quiet location. Kids really enjoyed pool. Owner was very kind and helpful. Definitely coming back.</p></div>
+          <!-- Add more reviews as needed -->
         </div>
       </div>
 
@@ -192,7 +228,7 @@
           <h2>All Reviews for Villa Laura</h2>
           <div class="review"><div class="review-header"><span class="reviewer">Эдита</span><span class="stars">★★★★★</span></div><p>A wonderful villa, fully equipped with everything you need. Modern renovation, each room has its own bathroom, large pool, beautiful view of the vineyards. The owner is very caring and attentive. Highly recommend, will definitely come back!</p></div>
           <div class="review"><div class="review-header"><span class="reviewer">Katarina</span><span class="stars">★★★★★</span></div><p>Das Haus ist toll, sauber und die Chefin super nett und zuvorkommend. Es war sehr sauber und wie auf den Bildern. Es gab leider keine Fliegengitter an den Fenstern.</p></div>
-          <!-- ...add all other reviews for Laura here... -->
+          <!-- Add more reviews as needed -->
         </div>
       </div>
 
@@ -203,7 +239,7 @@
           <h2>All Reviews for Villa Vale</h2>
           <div class="review"><div class="review-header"><span class="reviewer">Phan</span><span class="stars">★★★★★</span></div><p>Diese Unterkunft hat die volle Punktzahl verdient. Ausstattung, Lage und Besitzer, alles perfekt!</p></div>
           <div class="review"><div class="review-header"><span class="reviewer">Davide</span><span class="stars">★★★★★</span></div><p>Villa molto confortevole, ideale per due famiglie. Non manca nulla, il gestore è estremamente disponibile. A poca distanza da Labin, splendido borgo nel quale cenare. La zona è molto tranquilla und die piscina pulitissima.</p></div>
-          <!-- ...add all other reviews for Vale here... -->
+          <!-- Add more reviews as needed -->
         </div>
       </div>
 
@@ -230,11 +266,6 @@
         <button class="btn">Send Message</button>
       </form>
     </section>
-
-
-
-    <!-- Add this before the closing </body> tag -->
-    <script src="js/villa-reviews.js"></script>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
