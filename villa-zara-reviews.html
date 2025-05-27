@@ -51,8 +51,7 @@
   </div>
   <script src="js/villa-reviews.js"></script>
   <script>
-    // Render all reviews for Villa Zara
-    (function renderAllReviews() {
+    document.addEventListener("DOMContentLoaded", function() {
       const container = document.getElementById("villa-zara-reviews-list");
       const reviews = window.villaReviews && window.villaReviews.zara ? window.villaReviews.zara : [];
       if (!container) return;
@@ -69,7 +68,7 @@
           <p>${r.text}</p>
         </div>
       `).join('');
-    })();
+    });
   </script>
 </body>
 </html>
