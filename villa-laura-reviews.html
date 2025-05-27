@@ -6,69 +6,25 @@
   <title>Villa Laura Reviews | Istrian Villas</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .reviews-page-container {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 6px 32px rgba(0,0,0,0.10);
-    }
-    .review {
-      margin-bottom: 2rem;
-      background: #f8f8f8;
-      border-radius: 12px;
-      padding: 1.2rem 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .review-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: bold;
-      color: #225c37;
-      margin-bottom: .6rem;
-    }
-    .stars {
-      color: #FFD700;
-      font-size: 1.2em;
-      letter-spacing: 1px;
-    }
-    .back-link {
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      color: #2d7a4b;
-      text-decoration: underline;
-      font-weight: 600;
-    }
+    .reviews-page-container { max-width: 700px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 6px 32px rgba(0,0,0,0.10);}
+    .review { margin-bottom: 2rem; background: #f8f8f8; border-radius: 12px; padding: 1.2rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);}
+    .review-header { display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: #225c37; margin-bottom: .6rem;}
+    .stars { color: #FFD700; font-size: 1.2em; letter-spacing: 1px;}
+    .back-link { display: inline-block; margin-bottom: 1.5rem; color: #2d7a4b; text-decoration: underline; font-weight: 600;}
   </style>
 </head>
 <body>
   <div class="reviews-page-container">
     <a href="index.html#villas" class="back-link">&larr; Back to Villas</a>
     <h1>Reviews for Villa Laura</h1>
-    <div id="villa-laura-reviews-list"></div>
+
+    <div class="review"><div class="review-header"><span class="reviewer">Эдита</span><span class="stars">★★★★★</span></div><p>A wonderful villa, fully equipped with everything you need. Modern renovation, each room has its own bathroom, large pool, beautiful view of the vineyards. The owner is very caring and attentive. Highly recommend, will definitely come back!</p></div>
+    <div class="review"><div class="review-header"><span class="reviewer">Katarina</span><span class="stars">★★★★★</span></div><p>Das Haus ist toll, sauber und die Chefin super nett und zuvorkommend. Es war sehr sauber und wie auf den Bildern. Es gab leider keine Fliegengitter an den Fenstern.</p></div>
+    <div class="review"><div class="review-header"><span class="reviewer">Jasmine</span><span class="stars">★★★★</span></div><p>Wunderschönes Ferienhaus in idyllischer ruhiger Lage. Der Außenbereich mit Außenküche war das Highlight. Jedes Schlafzimmer hat sein eigenes Bad und TV mit Netflix. Sehr ruhig, Auto notwendig. Vermieterin sehr nett und hilfsbereit. Sehr empfehlenswert!</p></div>
+    <div class="review"><div class="review-header"><span class="reviewer">Tihomir</span><span class="stars">★★★★★</span></div><p>Wer Ruhe vom Alltag sucht, ist hier gut aufgehoben. Der große Pool war für die Kids ein Highlight und jedes Zimmer hat sein eigenes Badezimmer. Die Besitzerin ist immer für einen da und löst Probleme schnell und freundlich. Kommen gerne wieder.</p></div>
+    <div class="review"><div class="review-header"><span class="reviewer">Boris</span><span class="stars">★★★★★</span></div><p>Sve pohvale, vratit ćemo se sigurno! Domaćini su učinili sve da se osjećamo ugodno i dobrodošlo. Vila je lijepo uređena, vanjska kućica sa roštiljem pored bazena odlična, djeca su uživala u bazenu i vrtu.</p></div>
+    <div class="review"><div class="review-header"><span class="reviewer">Barbara (Germany)</span><span class="stars">★★★★</span></div><p>Ein tolles Haus, sehr zu empfehlen. Sehr geräumig mit schöner Einrichtung. Besonders gefallen hat uns die große Outdoor Küche und der Pool. Die Vermieterin war sehr hilfsbereit. Uns hat alles gefallen.</p></div>
+    <div class="review"><div class="review-header"><span class="reviewer">Barbara (Croatia)</span><span class="stars">★★★★★</span></div><p>Vila Laura je savršena za odmor! Mirna lokacija, puno zelenila, kuća prostrana, nova, čista, potpuno opremljena. Uživali smo u bazenu i vanjskoj kamenoj kućici s kuhinjom i roštiljem. Domaćica je super ljubazna. Definitivno preporuka i vraćamo se.</p></div>
   </div>
-  <script src="js/villa-reviews.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const container = document.getElementById("villa-laura-reviews-list");
-      const reviews = window.villaReviews && window.villaReviews.laura ? window.villaReviews.laura : [];
-      if (!container) return;
-      if (reviews.length === 0) {
-        container.innerHTML = "<p>No reviews yet.</p>";
-        return;
-      }
-      container.innerHTML = reviews.map(r => `
-        <div class="review">
-          <div class="review-header">
-            <span class="reviewer">${r.reviewer}</span>
-            <span class="stars">${"★".repeat(r.stars)}</span>
-          </div>
-          <p>${r.text}</p>
-        </div>
-      `).join('');
-    });
-  </script>
 </body>
 </html>
