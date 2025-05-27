@@ -19,79 +19,103 @@
       position: fixed;
       z-index: 9999;
       left: 0; top: 0; width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.55);
+      background: rgba(30, 41, 59, 0.65); /* dark blue overlay */
       justify-content: center;
       align-items: center;
+      transition: background 0.3s;
+      backdrop-filter: blur(2px);
     }
     .villa-modal.open {
       display: flex;
     }
     .villa-modal-content {
       background: #fff;
-      max-width: 600px;
+      max-width: 540px;
       width: 95vw;
-      max-height: 90vh;
+      max-height: 85vh;
       overflow-y: auto;
-      border-radius: 16px;
-      padding: 2rem;
+      border-radius: 18px;
+      padding: 2.5rem 2rem 2rem 2rem;
       position: relative;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-      /* Ensure scrollbars are visible if needed */
-      scrollbar-width: thin;
-      scrollbar-color: #225c37 #eee;
+      box-shadow: 0 8px 40px 0 rgba(30,41,59,0.18), 0 1.5px 6px 0 rgba(30,41,59,0.10);
+      animation: modalPopIn 0.35s cubic-bezier(.23,1.01,.32,1) both;
     }
-    .villa-modal-content::-webkit-scrollbar {
-      width: 8px;
-      background: #eee;
-    }
-    .villa-modal-content::-webkit-scrollbar-thumb {
-      background: #225c37;
-      border-radius: 8px;
+    @keyframes modalPopIn {
+      0% { transform: translateY(40px) scale(0.96); opacity: 0; }
+      100% { transform: none; opacity: 1; }
     }
     .villa-modal-close {
       position: absolute;
-      top: 1rem; right: 1rem;
-      background: #eee;
+      top: 1.2rem; right: 1.2rem;
+      background: #f3f4f6;
       border: none;
       border-radius: 50%;
-      width: 2rem; height: 2rem;
-      font-size: 1.3rem;
+      width: 2.3rem; height: 2.3rem;
+      font-size: 1.5rem;
       cursor: pointer;
-      color: #225c37;
+      color: #334155;
+      box-shadow: 0 2px 8px rgba(30,41,59,0.08);
+      transition: background 0.2s, color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .villa-reviews-summary .review {
-      margin-bottom: 1rem;
-      background: #f8f8f8;
+    .villa-modal-close:hover {
+      background: #225c37;
+      color: #fff;
+    }
+    .villa-modal-content h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #225c37;
+      letter-spacing: 0.5px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .reviews-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .review {
+      background: #f8fafc;
       border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 1.5px 8px rgba(30,41,59,0.06);
+      border-left: 4px solid #2d7a4b;
+      transition: box-shadow 0.2s;
+      position: relative;
     }
     .review-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-weight: bold;
+      font-weight: 600;
       color: #225c37;
-      margin-bottom: .6rem;
+      margin-bottom: .5rem;
+      font-size: 1.08em;
     }
     .stars {
       color: #FFD700;
-      font-size: 1.2em;
+      font-size: 1.15em;
       letter-spacing: 1px;
+      filter: drop-shadow(0 1px 1px #fff3);
     }
-    .btn.show-all-reviews {
-      margin-top: 0.5rem;
-      background: #225c37;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 0.5rem 1.2rem;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.2s;
+    .review p {
+      margin: 0;
+      color: #334155;
+      font-size: 1em;
+      line-height: 1.6;
     }
-    .btn.show-all-reviews:hover {
-      background: #2d7a4b;
+    @media (max-width: 600px) {
+      .villa-modal-content {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        max-width: 98vw;
+      }
+      .review {
+        padding: 0.9rem 0.7rem;
+      }
     }
   </style>
 </head>
