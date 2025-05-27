@@ -327,42 +327,74 @@ body {
 
 .villa-reviews-section {
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-  padding: 2rem;
-  margin: 2rem 0;
-  max-width: 700px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  margin: 2.5rem 0 2rem 0;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+
+.villa-reviews-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #2d7a4b;
+  letter-spacing: 0.5px;
+}
+
 .reviews-slider {
   display: flex;
   overflow-x: auto;
   gap: 1.5rem;
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #2d7a4b #eee;
 }
+
+.reviews-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.reviews-slider::-webkit-scrollbar-thumb {
+  background: #2d7a4b;
+  border-radius: 4px;
+}
+
 .review {
-  min-width: 250px;
-  background: #f8f8f8;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-width: 260px;
+  max-width: 320px;
+  background: #f6f9f6;
+  border-radius: 14px;
+  padding: 1.2rem 1rem 1rem 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   scroll-snap-align: start;
   flex-shrink: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .review-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: .5rem;
+  margin-bottom: .6rem;
   font-weight: bold;
+  color: #225c37;
 }
+
 .stars {
   color: #FFD700;
   font-size: 1.1em;
+  letter-spacing: 1px;
 }
+
 .btn.show-all-reviews {
   display: inline-block;
   margin-top: 1.5rem;
@@ -373,7 +405,9 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(45,122,75,0.08);
 }
+
 .btn.show-all-reviews:hover {
   background: #225c37;
 }
