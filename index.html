@@ -11,6 +11,16 @@
       cursor: pointer;
       display: block;
     }
+
+    /* Scale all images in the Lightbox to the same size */
+    .lb-image {
+      object-fit: contain !important;
+      width: 100% !important;
+      height: 70vh !important; /* or adjust as needed */
+      max-width: 100vw !important;
+      max-height: 80vh !important;
+      background: #222;
+    }
   </style>
 </head>
 <body>
@@ -67,41 +77,37 @@
 
         <!-- Villa Laura -->
         <div class="villa-card">
-          <div class="image-container">
-            <a href="images/Villa_Laura/picture1.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 1">
-              <img src="images/Villa_Laura/picture1.jpg" alt="Villa Laura">
-            </a>
-            <a href="images/Villa_Laura/picture2.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 2"></a>
-            <a href="images/Villa_Laura/picture3.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 3"></a>
-            <a href="images/Villa_Laura/picture4.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 4"></a>
-            <a href="images/Villa_Laura/picture5.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 5"></a>
-            <a href="images/Villa_Laura/picture6.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 6"></a>
-            <a href="images/Villa_Laura/picture7.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 7"></a>
-            <a href="images/Villa_Laura/picture8.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 8"></a>
+          <a href="images/Villa_Laura/picture1.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 1" class="image-container">
+            <img src="images/Villa_Laura/picture1.jpg" alt="Villa Laura">
             <div class="overlay">
               <p>Charming countryside retreat with spacious gardens and a pool.</p>
             </div>
-          </div>
+          </a>
+          <a href="images/Villa_Laura/picture2.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 2"></a>
+          <a href="images/Villa_Laura/picture3.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 3"></a>
+          <a href="images/Villa_Laura/picture4.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 4"></a>
+          <a href="images/Villa_Laura/picture5.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 5"></a>
+          <a href="images/Villa_Laura/picture6.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 6"></a>
+          <a href="images/Villa_Laura/picture7.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 7"></a>
+          <a href="images/Villa_Laura/picture8.jpg" data-lightbox="villa-laura" data-title="Villa Laura - Picture 8"></a>
           <h3 class="villa-name-fixed">Villa Laura</h3>
         </div>
 
         <!-- Villa Vale -->
         <div class="villa-card">
-          <div class="image-container">
-            <a href="images/Villa_Vale/picture1.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 1">
-              <img src="images/Villa_Vale/picture1.jpg" alt="Villa Vale">
-            </a>
-            <a href="images/Villa_Vale/picture2.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 2"></a>
-            <a href="images/Villa_Vale/picture3.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 3"></a>
-            <a href="images/Villa_Vale/picture4.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 4"></a>
-            <a href="images/Villa_Vale/picture5.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 5"></a>
-            <a href="images/Villa_Vale/picture6.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 6"></a>
-            <a href="images/Villa_Vale/picture7.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 7"></a>
-            <a href="images/Villa_Vale/picture8.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 8"></a>
+          <a href="images/Villa_Vale/picture1.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 1" class="image-container">
+            <img src="images/Villa_Vale/picture1.jpg" alt="Villa Vale">
             <div class="overlay">
               <p>Cozy villa perfect for families, surrounded by nature and tranquility.</p>
             </div>
-          </div>
+          </a>
+          <a href="images/Villa_Vale/picture2.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 2"></a>
+          <a href="images/Villa_Vale/picture3.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 3"></a>
+          <a href="images/Villa_Vale/picture4.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 4"></a>
+          <a href="images/Villa_Vale/picture5.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 5"></a>
+          <a href="images/Villa_Vale/picture6.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 6"></a>
+          <a href="images/Villa_Vale/picture7.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 7"></a>
+          <a href="images/Villa_Vale/picture8.jpg" data-lightbox="villa-vale" data-title="Villa Vale - Picture 8"></a>
           <h3 class="villa-name-fixed">Villa Vale</h3>
         </div>
 
