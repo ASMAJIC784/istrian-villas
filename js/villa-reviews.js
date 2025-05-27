@@ -25,6 +25,116 @@ const villaReviews = {
       reviewer: "Amy West",
       stars: 5,
       text: "Fantastic vacation villa surrounded by nature. Everything was brand new, modern, thoughtfully designed, fully equipped."
+    },
+    {
+      reviewer: "Thomas",
+      stars: 5,
+      text: "Just a perfect accommodation for a stay in group or family. Super friendly and helpful host. If it's free, don't bother to book it!"
+    },
+    {
+      reviewer: "Nina (Slovenia)",
+      stars: 5,
+      text: "Vse je bilo odlično!"
+    },
+    {
+      reviewer: "Nina (Croatia)",
+      stars: 5,
+      text: "Amazing house and well equipped. Spacious rooms and great pool. I also recommend restaurant Tri Murve that is nearby. Everything was great."
+    },
+    {
+      reviewer: "Vanja",
+      stars: 5,
+      text: "Our hosts (wonderful couple) did everything, from the first moment, to make us feel comfortable and welcome. They were there for us at all times, without violating our privacy in any way. The villa is beautifully decorated, and the children enjoyed the pool and the garden. I can only say that the whole experience was excellent. We'll be back next year. Everything was great."
+    },
+    {
+      reviewer: "Ruslan",
+      stars: 5,
+      text: "Magnificent and functional new villa in a quiet location with excellent views. In reality it is even more beautiful and spacious than the photos. Inside there are 5 comfortable bedrooms with en suite bathroom each and a large living room and kitchen. Outside there is parking, a swimming pool with sun loungers and a terrace with a large dining table and gas barbecue (special thanks). The lovely hosts make a great addition to the experience, there were two bottles waiting for us in the wine fridge and we were allowed to stay longer as there were no guests after us. Will definitely be back for a longer stay."
+    },
+    {
+      reviewer: "Marin",
+      stars: 5,
+      text: "Sve lijepo i uredno"
+    },
+    {
+      reviewer: "Verena",
+      stars: 5,
+      text: "Es war rund um ein perfekter Urlaub in der Villa Zara. In der Villa fehlt es an nichts & selbst wenn, war Rea sofort zur Stelle. Das Grundstück ist riesengroß, eine Tischtennisplatte steht draußen zur Verfügung, für Kinder ein Spielgerät und der beheizte Pool ist selbst an kälteren/windigen Tagen angenehm. Man hat einen schönen Ausblick auf die Weinreben und im Hintergrund auf die Berge. Im Haus ist alles modern und schön groß. Jedes Schlafzimmer hat ein eigenes Bad. Wir waren mehr als zufrieden mit der Unterkunft. Wenn es überhaupt was zu beanstanden gibt, dann das sie Außenbeleuchtung draußen am Tisch und Fliegengitter an den Fenstern/Türen fehlt. Aber das sind echt Kleinigkeiten, die nicht groß gestört haben."
+    },
+    {
+      reviewer: "Christoph",
+      stars: 5,
+      text: "Das Haus war einfach perfekt. Die Gastgeber sehr freundlich. Hatten nichts auszusetzen! Nichts"
+    },
+    {
+      reviewer: "Johannes",
+      stars: 5,
+      text: "Alles ist super schön eingerichtet. Die Ausstattung ist perfekt. Rea ist wirklich hilfsbereit und extrem zuvorkommend."
+    },
+    {
+      reviewer: "Nadine",
+      stars: 5,
+      text: "Wir hatten einen wundervollen Urlaub. Die Villa hat unsere Erwartungen übertroffen. Die Lage der Villa ist einfach idyllisch. Die Gastgeberin war zu jeder Zeit erreichbar und super freundlich. Vielen lieben Dank für den tollen Aufenthalt. Ein sehr gelungener Urlaub in Kroatien."
+    },
+    {
+      reviewer: "Tomaž",
+      stars: 4,
+      text: "Mirna lokacija, prostornost nastanitve"
+    },
+    {
+      reviewer: "Hannah",
+      stars: 4,
+      text: "Das Haus ist sehr schön und modern eingerichtet. Jedes Schlafzimmer hat sein eigenes Badezimmer und der Ausblick in die Natur ist beeindruckend. Wohnzimmer, Küche und Esszimmer verfügen über alle notwendigen Gegenstände für tolle gemeinsame Abende. Der Pool ist angenehm und mit ausreichend Liegen ausgestattet. Der Außenbereich ist bis auf fehlendes Licht für Abends schön gestaltet. Auch eine Grillplatte steht zur Verfügung. Ein Schneidebrett mehr in der Küche wäre hilfreich gewesen."
+    },
+    {
+      reviewer: "Nóra",
+      stars: 5,
+      text: "A ház nagyon szép, a környezet barátságos, nyugodt kikapcsolódásra kiválóan alkalmas. A szállásadó hihetetlenül kedves és figyelmes, mindenben segített és tökéletesen előkészítette a házat a fogadásunkra. Nagy társasággal is jól elfértünk, sokat használtuk a medencét és a grill sütőt."
+    },
+    {
+      reviewer: "Büttner",
+      stars: 5,
+      text: "Es wurde sich, ganz einfach gesagt, um alles gekümmert. Egal ob ein zusätzliches Bett für ein Kind im Übergangsalter zwischen 4 und 5 benötigt wurde oder man Informationen benötigt hat. Das Haus ist wunderschön und hat diesen Urlaub zu einem rundum- sorglos-Paket gemacht. Pool und Haus super sauber und gepflegt, Platz mehr als genug und Haushaltsgeräte alle vorhanden! Vielen Dank für die tolle Zeit und gerne wieder!"
+    },
+    {
+      reviewer: "Ismail",
+      stars: 5,
+      text: "Sehr schöne Villa in angenehmer, ruhiger Lage. Alles sehr neu gebaut und modern eingerichtet. Eine traumhafte Terrasse mit Gasgrill und Pool laden zu netten Abenden draußen ein. Die Hosts der Villa sind mega hilfsbereit und haben in unserer Abwesenheit die Stühle und Liegen aufgrund eines Sturms in Sicherheit gebracht. Kann die Villa jeder größeren Gruppe empfehlen!"
+    },
+    {
+      reviewer: "Grzegorz",
+      stars: 5,
+      text: "Wspaniali właściciele bardzo polecam ta Ville na Spokojny odpoczynek w Istria. Basen oraz wyposażenie."
+    },
+    {
+      reviewer: "Blaz",
+      stars: 5,
+      text: "There are no comments available for this review."
+    },
+    {
+      reviewer: "Magdalena",
+      stars: 5,
+      text: "There are no comments available for this review."
+    },
+    {
+      reviewer: "Dobrounig",
+      stars: 5,
+      text: "There are no comments available for this review."
+    },
+    {
+      reviewer: "Christopher",
+      stars: 4,
+      text: "There are no comments available for this review."
+    },
+    {
+      reviewer: "Sandra",
+      stars: 4,
+      text: "There are no comments available for this review."
+    },
+    {
+      reviewer: "Michael",
+      stars: 4,
+      text: "There are no comments available for this review."
     }
   ],
   laura: [
