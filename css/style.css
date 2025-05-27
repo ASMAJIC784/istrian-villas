@@ -324,3 +324,56 @@ body {
   height: 350px;  /* or whatever height you want */
   width: 100%;
 }
+
+.villa-reviews-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 2rem;
+  margin: 2rem 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.reviews-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+.review {
+  min-width: 250px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+.stars {
+  color: #FFD700;
+  font-size: 1.1em;
+}
+.btn.show-all-reviews {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7em 2em;
+  background: #2d7a4b;
+  color: #fff;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn.show-all-reviews:hover {
+  background: #225c37;
+}
