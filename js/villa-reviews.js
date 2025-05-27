@@ -198,7 +198,7 @@ const villaReviews = {
   ]
 };
 
-function renderReviews(villa, containerId, googleUrl) {
+function renderReviews(villa, containerId, reviewsPageUrl) {
   const container = document.getElementById(containerId);
   if (!container) return;
   const reviews = villaReviews[villa] || [];
@@ -207,7 +207,7 @@ function renderReviews(villa, containerId, googleUrl) {
   if (reviews.length === 0) {
     html += `<div class="review"><p>No reviews yet.</p></div>`;
   } else {
-    html += reviews.map(r => `
+    html += reviews.slice(0, 5).map(r => `
       <div class="review">
         <div class="review-header">
           <span class="reviewer">${r.reviewer}</span>
@@ -218,7 +218,7 @@ function renderReviews(villa, containerId, googleUrl) {
     `).join('');
   }
   html += `</div>
-    <a href="${googleUrl}" target="_blank" class="btn show-all-reviews">Show all reviews</a>`;
+    <a href="${reviewsPageUrl}" class="btn show-all-reviews">Show all reviews</a>`;
   container.innerHTML = html;
 }
 
@@ -226,7 +226,15 @@ function renderReviews(villa, containerId, googleUrl) {
 renderReviews(
   "zara",
   "villa-zara-reviews",
-  "https://www.google.com/maps/place/Villa+Zara/@45.1308378,14.1019225,619m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47634d7ce68eb081:0xdbda2ee71343e6d5!8m2!3d45.1308378!4d14.1019225!16s%2Fg%2F11kpsfb8mn?entry=ttu"
+  "villa-zara-reviews.html"
 );
-renderReviews("laura", "villa-laura-reviews", "#");
-renderReviews("vale", "villa-vale-reviews", "#");
+renderReviews(
+  "laura",
+  "villa-laura-reviews",
+  "villa-laura-reviews.html"
+);
+renderReviews(
+  "vale",
+  "villa-vale-reviews",
+  "villa-vale-reviews.html"
+);

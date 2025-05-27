@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Villa Zara Reviews | Istrian Villas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .reviews-page-container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+    }
+    .review {
+      margin-bottom: 2rem;
+      background: #f8f8f8;
+      border-radius: 12px;
+      padding: 1.2rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      color: #225c37;
+      margin-bottom: .6rem;
+    }
+    .stars {
+      color: #FFD700;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #2d7a4b;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="reviews-page-container">
+    <a href="index.html#villas" class="back-link">&larr; Back to Villas</a>
+    <h1>Reviews for Villa Zara</h1>
+    <div id="villa-zara-reviews-list"></div>
+  </div>
+  <script src="js/villa-reviews.js"></script>
+  <script>
+    // Render all reviews for Villa Zara
+    function renderAllReviews(villa, containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      const reviews = (window.villaReviews && window.villaReviews[villa]) || [];
+      if (reviews.length === 0) {
+        container.innerHTML = "<p>No reviews yet.</p>";
+        return;
+      }
+      container.innerHTML = reviews.map(r => `
+        <div class="review">
+          <div class="review-header">
+            <span class="reviewer">${r.reviewer}</span>
+            <span class="stars">${"★".repeat(r.stars)}</span>
+          </div>
+          <p>${r.text}</p>
+        </div>
+      `).join('');
+    }
+    renderAllReviews("zara", "villa-zara-reviews-list");
+  </script>
+</body>
+</html>
